@@ -15,11 +15,19 @@ $email=$_GET['email'];
 $phone_no=$_GET['phone'];
 $message=$_GET['message'];
 
-$query = "INSERT INTO `user_info`(`First Name`, `Last Name`, `Email`, `Phone no`, `Message`) 
-            VALUES ('$first_name','$last_name','$email','$phone_no','$message')";
-        echo "$query";
-
+$query = "INSERT INTO `user_info`(`Firstname`, `Lastname`)
+            VALUES ('$first_name','$last_name')";
+            
+// $query2 = "INSERT INTO  user_contact_data(`Email`, `PhoneNo`,'Message')
+//             VALUES ('$email','$phone_no','$message')";
+$query2="INSERT INTO `user_contact_data`( `Email`, `PhoneNo`, `Message`) 
+VALUES ('$email','$phone_no','$message')";
+$query3="select * from user_info, user_contact_data where user_info.uid = user_contact_data.uc_id";
+       echo "$query";
+        echo "$query2";
         mysqli_query($con,$query);
-
+        mysqli_query($con,$query2);
+        mysqli_query($con,$query3);
         header('location:index.php');
 ?>
+ 
