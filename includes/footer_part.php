@@ -8,7 +8,7 @@
                         <li><a href="#" class="inner-text">Web Development</a></li>
                         <li><a href="#" class="inner-text">Game Development</a></li>
                         <li><a href="#" class="inner-text">UI/UX Design</a></li>
-                        <li><a href="#" class="inner-text">Creer</a></li>
+                        <li><a href="career-detail.php" class="inner-text">Career</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
